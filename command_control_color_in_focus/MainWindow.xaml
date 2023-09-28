@@ -6,6 +6,17 @@
         xmlns:local="clr-namespace:command_control_color_in_focus"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:ColorCommands.RedCommand" Executed="RedCommand_Executed"/>
+        <CommandBinding Command="local:ColorCommands.GreenCommand" Executed="GreenCommand_Executed"/>
+        <CommandBinding Command="local:ColorCommands.BlueCommand" Executed="BlueCommand_Executed"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="local:ColorCommands.RedCommand" Key="R" Modifiers="Ctrl" />
+        <KeyBinding Command="local:ColorCommands.GreenCommand" Key="G" Modifiers="Ctrl" />
+        <KeyBinding Command="local:ColorCommands.BlueCommand" Key="B" Modifiers="Ctrl" />
+    </Window.InputBindings>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
@@ -37,9 +48,9 @@
         </StackPanel>
 
         <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
-            <Button Margin="10" Width="100">Red</Button>
-            <Button Margin="10" Width="100">Green</Button>
-            <Button Margin="10" Width="100">Blue</Button>
+            <TextBlock Margin="10" Width="150">Red: hot key - R+Ctrl</TextBlock>
+            <TextBlock Margin="10" Width="150">Green: hot key - G+Ctrl</TextBlock>
+            <TextBlock Margin="10" Width="150">Blue: hot key - B+Ctrl</TextBlock>
         </StackPanel>
     </Grid>
 </Window>
