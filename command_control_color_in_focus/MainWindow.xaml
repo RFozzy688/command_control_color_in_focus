@@ -7,6 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+            <Button Height="100" Width="100" Margin="10">Button 1</Button>
+            <Button Height="100" Width="100" Margin="10">Button 2</Button>
+            <Button Height="100" Width="100" Margin="10">Button 3</Button>
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
+            <CheckBox Margin="20">CheckBox 1</CheckBox>
+            <CheckBox Margin="20">CheckBox 2</CheckBox>
+            <CheckBox Margin="20">CheckBox 3</CheckBox>
+        </StackPanel>
+        
+        <StackPanel Margin="10" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2">
+            <TextBox Margin="10" />
+            <TextBox Margin="10" />
+            <TextBox Margin="10" />
+        </StackPanel>
 
+        <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
+            <Button Margin="10" Width="100">Red</Button>
+            <Button Margin="10" Width="100">Green</Button>
+            <Button Margin="10" Width="100">Blue</Button>
+        </StackPanel>
     </Grid>
 </Window>
